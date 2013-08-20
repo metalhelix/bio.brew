@@ -1,4 +1,4 @@
-local version="r223"
+local version="r240"
 local seed_name="soapdenovo2_$version"
 local platform="LINUX-generic"
 local type="tgz"
@@ -7,7 +7,7 @@ local tb_file=`basename $URL`
 local extract_name=`basename $URL .$type`
 local deps=()
 local external_deps=()
-local install_files=(pregraph_sparse_63mer.v1.0.3 pregraph_sparse_127mer.v1.0.3 SOAPdenovo-63mer SOAPdenovo-127mer)
+local install_files=(SOAPdenovo-63mer SOAPdenovo-127mer)
 
 do_install()
 {
@@ -18,7 +18,7 @@ do_install()
   for file in ${install_files[@]}
   do
     echo $file
-    mv $TB_DIR/$file $STAGE_DIR/$seed_name
+    mv $TB_DIR/$extract_name/$file $STAGE_DIR/$seed_name
   done
 }
 
