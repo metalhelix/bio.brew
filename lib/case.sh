@@ -62,6 +62,9 @@ case $bb_action in
   "clean")
       do_clean $seed_name
     ;;
+  "unlock")
+      do_unlock $seed_name
+    ;;
   "list")
     ;;
   *)

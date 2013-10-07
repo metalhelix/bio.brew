@@ -28,6 +28,7 @@ COMMANDS:
   test     : run recipe tests.
   activate : make this recipe live.
   fake     : pretend to install this recipe.
+  unlock   : remove lock and installed files
   clean    : USE WITH CAUTION!
              remove all traces of a recipe/program. 
              Useful when testing a recipe.
