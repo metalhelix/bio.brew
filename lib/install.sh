@@ -211,17 +211,17 @@ before_install()
 #    DESC: performs post functionality after
 #          do_install is called.
 #          Called by lib/case.sh
-# PARAM 1: recipe name
+# PARAM 1: seed name
 #   
 #===============================================
 after_install()
 {
-  local recipe_name=$1
-  log "chmod -R 755 $STAGE_DIR"
-  chmod -R 755 $STAGE_DIR
-  local lock_file="$LOG_DIR/$recipe_name.lock"
-  local install_flag="$LOG_DIR/$recipe_name.installed"
-  log "recipe [$recipe_name] installed."
+  local seed_name=$1
+  log "chmod -R 755 $STAGE_DIR/$seed_name"
+  chmod -R 755 $STAGE_DIR/$seed_name
+  local lock_file="$LOG_DIR/$seed_name.lock"
+  local install_flag="$LOG_DIR/$seed_name.installed"
+  log "recipe [$seed_name] installed."
   log "removing lock. [$lock_file]"
   rm -f $lock_file
   log "touching install flag [$install_flag]"

@@ -1,7 +1,9 @@
-local version="2.0.9"
+#local version="2.0.9"
+local version="2.0.10"
 local seed_name="tophat_$version"
 local platform="Linux_x86_64"
 local os=`uname -s`
+local d=`date +%Y-%m-%d_%R_%S`
 if [ "$os" == "Darwin" ] ; then
   platform="OSX_x86_64"
 fi
@@ -26,7 +28,7 @@ do_install()
 }
 do_test()
 {
-  $STAGE_DIR/$seed_name/tophat -N 0 -g 1 -x 1 --no-coverage-search /n/data1/genomes/bowtie-index/sacCer2/sacCer2 $BB_PATH/tests/sample_yeast.fastq
+  $STAGE_DIR/$seed_name/tophat -N 0 -g 1 -x 1 --no-coverage-search -o /tmp/$d /n/data1/genomes/bowtie-index/sacCer2/sacCer2 $BB_PATH/tests/sample_yeast.fastq
 }
 
 do_activate()
