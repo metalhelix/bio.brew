@@ -1,12 +1,13 @@
 
-local version="1.5.64"
+local version="2.3.25"
 local type="zip"
-local URL="http://www.broadinstitute.org/igvdata/downloads/IGV_${version}.${type}"
+local URL="http://www.broadinstitute.org/igv/projects/downloads/IGV_${version}.${type}"
 local tb_file=`basename $URL`
 local seed_name="igv-${version}"
 local unzip_dir="IGV_${version}"
 local deps=(java)
-local install_files=(igv.jar batik-codec.jar igv_linux-64.sh)
+local install_files=(igv.sh igv.command igv.jar batik-codec.jar)
+
 
 do_install()
 {
