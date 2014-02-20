@@ -1,4 +1,4 @@
-local version="1.3.1"
+local version="1.3.2"
 local URL="https://github.com/metalhelix/bam_stats.git"
 local seed_name="bam_stats_$version"
 local deps=()

@@ -1,5 +1,6 @@
-
-local version="20121222"
+#local version="20121222"
+#local version="20130922"
+local version="20131122"
 local type="tar.bz2"
 local URL="http://ftp.gnu.org/gnu/parallel/parallel-${version}.${type}"
 

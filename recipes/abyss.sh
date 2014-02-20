@@ -19,7 +19,7 @@ do_install()
 
   cd $STAGE_DIR/$seed_name
   mkdir $STAGE_DIR/$seed_name/install
-  configure_tool $seed_name "--enable-mpich --with-mpi=/n/local/bin/mpich2 CPPFLAGS=-I/n/local/include" "$STAGE_DIR/$seed_name/install"
+  configure_tool $seed_name "--enable-mpich --with-mpi=/n/local/bin/mpich2 CPPFLAGS=-I/n/local/include" "$STAGE_DIR/$seed_name/install --enable-maxk=96"
  
   make_tool $seed_name $make_j
   install_tool $seed_name

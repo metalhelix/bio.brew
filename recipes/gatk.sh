@@ -2,8 +2,9 @@
 #local version="1.1-37-ge63d9d8"
 # local version="1.2-62-g41ddc7b"
 # local version="1.4-37-g0b29d54"
-local version="2.4-9"
-local real_version="2.4-9-g532efad"
+# local real_version="2.4-9-g532efad"
+local version="2.7-4"
+local real_version="2.7-4-g6f46d11"
 local type="tar.bz2"
 
 # as you have to sign in and agree to statement 

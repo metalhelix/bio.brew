@@ -1,5 +1,5 @@
 
-local version="0.22"
+local version="0.30"
 local type="zip"
 local URL="http://www.usadellab.org/cms/uploads/supplementary/Trimmomatic/Trimmomatic-${version}.${type}"
 local tb_file=`basename $URL`
